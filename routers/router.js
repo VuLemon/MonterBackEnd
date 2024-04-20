@@ -7,7 +7,9 @@ const {register, login, sendOTP} = require('../controllers/controller')
 const {auth} = require('../middleware/auth')
 
 
-
+router.get('/', function(req,res) {
+    console.log("I'm in")
+})
 router.post('/register', register)
 router.post('/login', login)
 router.post('/sendOTP', sendOTP)
