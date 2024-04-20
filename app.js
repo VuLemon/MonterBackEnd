@@ -12,7 +12,7 @@ const router = require("./routers/router")
 
 app.use("/", router)
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log('app is running on port %d', PORT);
 })
 
