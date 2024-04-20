@@ -7,8 +7,7 @@ exports.auth = (req, res, next) => {
     try {
         const token = req.headers.authorization.split(' ')[1];
         
-        // Verify the token
-        const decodedToken = jwt.verify(token, JWT);
+        const decodedToken = jwt.verify(token, JWT); // verify the JWT associated with the request. See if it the currently logged in user
         
         // Attach the user ID to the request object
         req.userId = decodedToken.userId;
