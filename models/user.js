@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//User schema containing emails, passwords as well as other data
 const user = mongoose.Schema({
     email: {
         type: String,
@@ -30,7 +31,11 @@ const user = mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    },
+    token: {
+        type: String,
     }
+
 })
 
 module.exports = mongoose.model('user', user)
